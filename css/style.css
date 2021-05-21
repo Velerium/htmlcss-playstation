@@ -12,6 +12,7 @@
     border-radius: 22px;
     transition: border-color 0.2s ease-in-out;
     cursor: pointer;
+    margin-left: -5px;
 }
 
 p {
@@ -239,7 +240,7 @@ h1 {
 .new-games, .new-games-intro {
     background-color: #1f1f1f;
     color: #fff;
-    padding-top: 36px;
+    padding: 36px;
 }
 
 .new-games h3 {
@@ -282,7 +283,6 @@ h1 {
 .browse .btn-border-browse {
     width: 130px;
     color: white;
-    margin-left: -5px;
 }
 
 .browse .btn-border-browse:hover {
