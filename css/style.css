@@ -19,6 +19,11 @@ p {
     font-size: 18px;
 }
 
+h1 {
+    font-size: 40px;
+    margin-bottom: 24px;
+}
+
 .brand-bar {
     height: 40px;
     background-color: black;
@@ -66,7 +71,7 @@ p {
     color: white;
     background-color: #333;
     margin-left: 12px;
-    padding: 8px 16px 10px;
+    padding: 7px 16px;
 }
 
 [class*="jumbotron"] {
@@ -112,10 +117,6 @@ p {
     border-radius: 30px;
     padding: 36px;
     margin-bottom: 48px;
-}
-
-h1 {
-    font-size: 40px;
 }
 
 .btn-border-jumbo {
@@ -235,26 +236,109 @@ h1 {
     width: 60%;
 }
 
-.new-games {
+.new-games, .new-games-intro {
     background-color: #1f1f1f;
     color: #fff;
     padding-top: 36px;
 }
 
-.new-games h1, .new-games h2 {
-    margin-bottom: 36px;
+.new-games h3 {
+    margin-bottom: 24px;
 }
 
-.new-games .row img {
+.new-games img {
     width: 100%;
     border-radius: 25px;
     margin-bottom: 15px ;
 }
 
-.new-games .row h5 {
+.new-games h5 {
     font-size: 18px;
-    margin-bottom: 30px;
+    margin-bottom: 48px;
 }
+
+.browse-intro {
+    padding-top: 48px;
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.browse-intro p {
+    margin: 0;
+}
+
+.browse {
+    margin-bottom: 72px;
+}
+
+.browse > div {
+    margin-bottom: 36px;
+}
+
+.browse img {
+    width: 100%;
+}
+
+.browse .btn-border-browse {
+    width: 130px;
+    color: white;
+    margin-left: -5px;
+}
+
+.browse .btn-border-browse:hover {
+    border-color: #2d64e6
+}
+
+.browse .button-browse {
+    background-color: #2d64e6;
+    padding: 10px 5px;
+}
+
+.ps-plus {
+    background-color: #bebcbb;
+    justify-content: center;
+    align-items: center;
+}
+
+.ps-plus p {
+    color: black;
+    margin-bottom: 24px;
+}
+
+.ps-plus .plus-info {
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+.ps-plus .plus-info img {
+    width: 60%;
+    margin-top: 12px;
+    margin-bottom: 24px;
+}
+
+.ps-plus-games {
+    height: 100%;
+}
+
+.ps-plus .ps-plus-games img {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.ps-plus .btn-border-ps-plus {
+    width: 200px;
+    color: #2d64e6;
+}
+
+.ps-plus .btn-border-ps-plus:hover {
+    border-color: #d9dadc;
+}
+
+.ps-plus .button-ps-plus {
+    background-color: #d9dadc;
+}
+
 
 
 @media all and (max-width: 350px) {
@@ -266,5 +350,19 @@ h1 {
 @media all and (max-width: 767px) {
     .console {
         margin-bottom: 72px;
-    }    
+    }
+}
+
+@media all and (min-width: 768px) {
+    .ps-plus .ps-plus-games img {
+        display: block;
+    }
+
+    .browse h1 {
+        height: 2.5em;
+    }                        /*These heights exist to even out the various parts*/
+    
+    .browse p {
+        height: 4em;
+    }
 }
