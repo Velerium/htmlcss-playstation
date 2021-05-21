@@ -3,8 +3,16 @@
     padding: 8px 8px 10px;
     text-align: center;
     font-size: 15px;
+    border: transparent 3px solid;
+    background-clip: padding-box;
 }
 
+[class*="btn-border"] {
+    border: 2px transparent solid;
+    border-radius: 22px;
+    transition: border-color 0.2s ease-in-out;
+    cursor: pointer;
+}
 
 p {
     color: grey;
@@ -16,10 +24,20 @@ p {
     background-color: black;
     justify-content: flex-end;
     align-items: center;
+    margin: 0;
 }
 
 .brand-bar img {
     width: 130px;
+}
+
+.nav-bar {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 1001;
+    background-color: #eee;
+    margin: 0;
 }
 
 .nav-bar .container-fluid {
@@ -28,12 +46,15 @@ p {
 
 .nav-bar .navbar-nav .nav-link {
     color: black;
+    padding: 8px 12px;
 }
 
-.nav-bar .fa-angle-down {
-    color: grey;
-    margin-left: 5px;
-    font-size: 12px;
+.nav-bar .me-auto .nav-link::after, #play::after {
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    vertical-align: middle;
+    margin-left: 8px;
 }
 
 .nav-bar .fa-search {
@@ -44,20 +65,22 @@ p {
 .nav-bar .navbar-nav .button {
     color: white;
     background-color: #333;
+    margin-left: 12px;
+    padding: 8px 16px 10px;
 }
 
 [class*="jumbotron"] {
     height: 800px;
-    margin-bottom: 36px;
     background-size: cover;
     background-position-x: center;
 }
 
 .jumbotron {
     background-image: url(../img/jumbo-bg.png);
+    margin-bottom: 36px;
 }
 
-[class*="jumbotron"] .container-fluid {
+[class*="jumbotron"] .container {
     height: 100%;
 }
 
@@ -85,7 +108,7 @@ p {
 }
 
 [class*="jumbotron"] .row .layer {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.3);
     border-radius: 30px;
     padding: 36px;
     margin-bottom: 48px;
@@ -95,22 +118,31 @@ h1 {
     font-size: 40px;
 }
 
-.button-jumbo {
+.btn-border-jumbo {
+    width: 115px;
+}
+
+.btn-border-jumbo:hover  {
+    border-color: orangered;
+}
+
+.row .btn-border-jumbo .button-jumbo {
     background-color: orangered;
-    width: 110px;
+    margin-bottom: 0;
 }
 
 /*Jumbotron ends here */
 
 .games {
     padding: 0 24px;
-    margin-bottom: 72px;
+    margin-bottom: 96px;
 }
 
 .item {
     border: #fff solid 2px;
     border-radius: 20px;
     margin-bottom: 24px;
+    transition: all 0.2s ease-in-out;
 }
 
 .item:hover {
@@ -125,7 +157,11 @@ h1 {
 
 .console {
     text-align: center;
-    margin-bottom: 72px;
+    margin-bottom: 24px;
+}
+
+.console p {
+    margin-bottom: 36px;
 }
 
 .console h6 {
@@ -134,8 +170,8 @@ h1 {
 }
 
 .hardware, .hardware-list {
-    padding: 0 36px;
     margin-bottom: 24px;
+    padding: 0 36px;
 }
 
 .hardware {
@@ -147,14 +183,22 @@ h1 {
 }
 
 .hardware h1, .console h1 {
-    margin-bottom: 36px;
+    margin-bottom: 24px;
 }
 
 .button-hardware {
     background-color: #2d64e6;
     color: #fff;
     width: 180px;
+}
+
+.btn-border-hardware {
+    width: 185px;
     margin-top: 30px;
+}
+
+.btn-border-hardware:hover  {
+    border-color: #2d64e6;
 }
 
 .hardware-list img {
@@ -185,15 +229,42 @@ h1 {
 
 .jumbotron-2 {
     background-image: url(../img/it-takes-two-hero-banner-desktop.jpg);
-    margin-bottom: 0;
 }
 
 .jumbotron-2 .row img {
     width: 60%;
 }
 
+.new-games {
+    background-color: #1f1f1f;
+    color: #fff;
+    padding-top: 36px;
+}
+
+.new-games h1, .new-games h2 {
+    margin-bottom: 36px;
+}
+
+.new-games .row img {
+    width: 100%;
+    border-radius: 25px;
+    margin-bottom: 15px ;
+}
+
+.new-games .row h5 {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+
 @media all and (max-width: 350px) {
     .jumbotron-2 .row .layer {
         padding: 18px;
     }
+}
+
+@media all and (max-width: 767px) {
+    .console {
+        margin-bottom: 72px;
+    }    
 }
