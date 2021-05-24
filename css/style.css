@@ -76,7 +76,7 @@ h1 {
 }
 
 .nav-item:hover .nav-link {
-    color: #2d64e6;
+    color: #2d64e6!important;
 }
 
 .nav-bar .fa-search {
@@ -85,7 +85,7 @@ h1 {
 }
 
 .nav-bar .navbar-nav .button {
-    color: white;
+    color: white!important;
     background-color: #333;
     padding: 10px 16px;
 }
@@ -346,6 +346,14 @@ h1 {
 
 .button-ps-plus {
     background-color: #d9dadc;
+}
+
+.sales img {
+    transition: transform .2s ease;
+}
+
+.sales img:hover {
+    transform: scale(1.05);
 }
 
 /* PS NOW SECTION START */   
