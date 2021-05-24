@@ -21,7 +21,7 @@
     </div>
 
     <div class="row nav-bar">
-        <nav class="col navbar navbar-expand-lg navbar-light"> <!-- fixed-top -->
+        <nav class="col navbar navbar-expand-lg"> <!-- fixed-top -->
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
                     <img src="./img/play_logo.svg" alt="">
@@ -59,7 +59,9 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link button" href="#">Accedi</a>
+                            <div class="btn-border-nav">
+                                <a class="nav-link button" href="#">Accedi</a>
+                            </div>
                         </li>
 
                         <li class="nav-item">
@@ -80,12 +82,9 @@
         <div class="row">
             <div class="col jumbotron">
                 <div class="container">
-                    <div class="row column justify-content-end">
+                    <div class="row">
                         <div class="col-12 col-lg-4">
                             <img src="./img/returnal-hero-banner-logo.png" alt="Returnal image">
-                        </div>
-
-                        <div class="col-12 col-lg-4">
                             <h1>Rompi il cerchio</h1>
                             <p>Rialzati dopo ogni sconfitta e affronta una nuova sfida con ogni rinascita in questo esplosivo thriller fantascientifico, disponibile in esclusiva su PS5.</p>
                             <div class="btn-border-jumbo">
@@ -167,7 +166,7 @@
     
         <div class="row hardware-list">
 
-            <div class="col">
+            <div class="col active">
                 <img src="./img/playstation-5-thumb.png" alt="Playstation 5 image">
                 <div>Console PS5</div>
                 <div> <!--Don't remove! This enables transitions!--> </div>
@@ -204,18 +203,19 @@
         <div class="row">
             <div class="col jumbotron-2">
                 <div class="container">
-                    <div class="row column justify-content-end">
+                    <div class="row">
 
                         <div class="col-12 col-lg-4">
                             <img src="./img/it-takes-two-logo.png" alt="It Takes Two logo">
-                        </div>
 
-                        <div class="col-12 col-lg-4 layer">
-                            <h1>Un'avventura cooperativa selvaggia ti attende</h1>
-                            <p>Trova un amico e partite insieme per l'avventura più folle delle vostre vite in It Takes Two, un gioco d'avventura cooperativa a piattaforme che stravolge il suo genere.</p>
-                            <div class="btn-border-jumbo">
-                                <div class="button-jumbo">Acquista ora</div>
+                            <div class="layer">
+                                <h1>Un'avventura cooperativa selvaggia ti attende</h1>
+                                <p>Trova un amico e partite insieme per l'avventura più folle delle vostre vite in It Takes Two, un gioco d'avventura cooperativa a piattaforme che stravolge il suo genere.</p>
+                                <div class="btn-border-jumbo">
+                                    <div class="button-jumbo">Acquista ora</div>
+                                </div>
                             </div>
+
                         </div>
 
                     </div>
@@ -447,19 +447,27 @@
                 <div class="row social-logos">
 
                     <div class="col-6 col-sm-3">
-                        <img src="./img/twitter.jpg" alt="">
+                        <a href="#">
+                            <img src="./img/twitter.jpg" alt="">
+                        </a>
                     </div>
 
                     <div class="col-6 col-sm-3">
-                        <img src="./img/facebook.jpg" alt="">
+                        <a href="#">
+                            <img src="./img/facebook.jpg" alt="">
+                        </a>
                     </div>
 
                     <div class="col-6 col-sm-3">
-                        <img src="./img/instagram.jpg" alt="">
+                        <a href="#">
+                            <img src="./img/instagram.jpg" alt="">
+                        </a>
                     </div>
 
                     <div class="col-6 col-sm-3">
-                        <img src="./img/youtube.png" alt="">
+                        <a href="#">
+                            <img src="./img/youtube.png" alt="">
+                        </a>
                     </div>
 
                 </div>
@@ -483,13 +491,13 @@
                         <div class="col-11 col-md-4 col-lg-2">
 
                             <ul>
-                                <li>Supporto</li>
-                                <li>Informativa sulla privacy e sui cookie</li>
-                                <li>Termini di utilizzo del sito Web</li>
-                                <li>PlayStation Studios</li>
-                                <li>Termini legali</li>
-                                <li>Chi siamo</li>
-                                <li>PlayStation e l'ambiente</li>
+                                <li><a href="#">Supporto</a></li>
+                                <li><a href="#">Informativa sulla privacy e sui cookie</a></li>
+                                <li><a href="#">Termini di utilizzo del sito Web</a></li>
+                                <li><a href="#">PlayStation Studios</a></li>
+                                <li><a href="#">Termini legali</a></li>
+                                <li><a href="#">Chi siamo</a></li>
+                                <li><a href="#">PlayStation e l'ambiente</a></li>
                             </ul>
 
                         </div>
@@ -497,13 +505,13 @@
                         <div class="col-11 col-md-4 col-lg-2">
 
                             <ul>
-                                <li>Termini di servizio di PSN</li>
-                                <li>Termini di annullamento del PS Store</li>
-                                <li>Avvertenze per la salute</li>
-                                <li>Classificazioni per età</li>
-                                <li>Termini d'uso del Software</li>
-                                <li>Lavora con PlayStation</li>
-                                <li>Mappa del sito</li>
+                                <li><a href="#">Termini di servizio di PSN</a></li>
+                                <li><a href="#">Termini di annullamento del PS Store</a></li>
+                                <li><a href="#">Avvertenze per la salute</a></li>
+                                <li><a href="#">Classificazioni per età</a></li>
+                                <li><a href="#">Termini d'uso del Software</a></li>
+                                <li><a href="#">Lavora con PlayStation</a></li>
+                                <li><a href="#">Mappa del sito</a></li>
                             </ul>
                         
                         </div>
@@ -511,10 +519,10 @@
                         <div class="col-11 col-md-4 col-lg-2 last-ul">
 
                             <ul>
-                                <li>Facebook</li>
-                                <li>Twitter</li>
-                                <li>YouTube</li>
-                                <li>Instagram</li>
+                                <li><a href="#">Facebook</a></li>
+                                <li><a href="#">Twitter</a></li>
+                                <li><a href="#">YouTube</a></li>
+                                <li><a href="#">Instagram</a></li>
                             </ul>
 
                         </div>

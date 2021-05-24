@@ -25,16 +25,12 @@ h1 {
     margin-bottom: 24px;
 }
 
-.hardware img, .sales img, .social-logos img {
+.hardware img, .sales img, .social-logos img, .item img, .browse img {
     width: 100%;
 }
 
 .col > .container {
     padding: 0 12px;  /*This normalizes nested containers' paddings*/
-}
-
-.reset {
-    padding: 0;
 }
 
 .brand-bar {
@@ -58,13 +54,17 @@ h1 {
     margin: 0;
 }
 
+.navbar-nav {
+    align-items: center;
+}
+
 .nav-bar .container-fluid {
     padding: 0;
 }
 
 .nav-bar .navbar-nav .nav-link {
     color: black;
-    padding: 8px 12px;
+    padding: 7px 12px;
 }
 
 .nav-bar .me-auto .nav-link::after, #play::after {
@@ -75,6 +75,10 @@ h1 {
     margin-left: 8px;
 }
 
+.nav-item:hover .nav-link {
+    color: #2d64e6;
+}
+
 .nav-bar .fa-search {
     margin: 2px 5px 0 15px;
     font-size: 22px;
@@ -83,12 +87,19 @@ h1 {
 .nav-bar .navbar-nav .button {
     color: white;
     background-color: #333;
+    padding: 10px 16px;
+}
+
+.btn-border-nav {
     margin-left: 12px;
-    padding: 7px 16px;
+}
+
+.btn-border-nav:hover  {
+    border-color: #333;
 }
 
 [class*="jumbotron"] {
-    height: 800px;
+    padding-top: 400px;  /*It's either this or a fixed height...*/
     background-size: cover;
     background-position-x: center;
 }
@@ -102,15 +113,8 @@ h1 {
     height: 100%;
 }
 
-.column {
-    flex-direction: column;
-}
-
-.column > div:last-child {
-    margin-bottom: 48px;
-}
-
 [class*="jumbotron"] .row {
+    margin-bottom: 48px;
     height: 100%;
     color: #fff;
     font-weight: 600;
@@ -118,11 +122,14 @@ h1 {
 
 [class*="jumbotron"] .row div > * {
     margin-bottom: 24px;
-    color: #fff;
 }
 
 [class*="jumbotron"] .row img {
     width: 60%;
+}
+
+[class*="jumbotron"] h1, [class*="jumbotron"] p {
+    color: #fff;
 }
 
 .btn-border-jumbo {
@@ -142,7 +149,7 @@ h1 {
 
 .games {
     margin: 0 -17px 96px;
-    /* This offsets the space created by hovering on games */
+    /* This offsets the space created by the border while hovering on games */
     /* -12px: default row; -5px: border width */
 }
 
@@ -158,9 +165,9 @@ h1 {
 }
 
 .item img {
-    width: 100%;
     border: #fff solid 3px;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 .console, .sales-intro {
@@ -168,16 +175,12 @@ h1 {
     margin-bottom: 24px;
 }
 
-.console p {
-    margin-bottom: 36px;
-}
-
 .console h6 {
     color: #2d64e6;
     margin: 0;
 }
 
-.hardware, .hardware-list {
+.hardware, .hardware-list, .console p, .ps-plus p, .ps-now p, .social-logos {
     margin-bottom: 24px;
 }
 
@@ -210,6 +213,11 @@ h1 {
     text-align: center;
     margin-bottom: 24px;
     padding-bottom: 12px;
+    opacity: 0.5;
+}
+
+.hardware-list .col:hover, .col.active {
+    opacity: 1;
 }
 
 .hardware-list .col div:last-child {
@@ -230,6 +238,12 @@ h1 {
     background-image: url(../img/it-takes-two-hero-banner-desktop.jpg);
 }
 
+.layer {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    padding: 12px;
+}
+
 .new-games {
     background-color: #1f1f1f;
     color: #fff;
@@ -244,7 +258,15 @@ h1 {
 .new-games img {
     width: 100%;
     border-radius: 25px;
-    margin-bottom: 15px ;
+    margin-bottom: 12px;
+}
+
+.new-games .row > div {
+    transition: transform .2s ease;
+}
+
+.new-games .row > div:hover:not(:first-child) {  /*Not the titles!!*/
+    transform: scale(1.1);
 }
 
 .new-games h5 {
@@ -268,10 +290,6 @@ h1 {
 
 .browse > div, .grey, .sales, .sales img {
     margin-bottom: 36px;
-}
-
-.browse img {
-    width: 100%;
 }
 
 .btn-border-browse {
@@ -299,10 +317,6 @@ h1 {
     background-color: #bebcbb;
 }
 
-.ps-plus p, .ps-now p, .social-logos {
-    margin-bottom: 24px;
-}
-
 .ps-plus p {
     color: black;
 }
@@ -310,10 +324,6 @@ h1 {
 .plus-info img, .now-info img {
     width: 60%;
     margin-bottom: 24px;
-}
-
-.plus-games, .ps-now-games {
-    height: 100%;
 }
 
 .plus-games img, .ps-now-games img {
@@ -361,11 +371,16 @@ h1 {
 }
 
 .social h1 {
-    margin: 72px auto;
+    margin: 72px 0;
 }
 
 .social-logos img {
     margin-bottom: 48px;
+    transition: transform .2s ease;
+}
+
+.social-logos img:hover {
+    transform: scale(1.1);
 }
 
 /* FOOTER STARTS HERE */
@@ -378,12 +393,20 @@ h1 {
     font-size: 14px;
 }
 
+.footer p, .footer a {
+    color: #fff;
+}
+
 .footer p {
     font-size: 14px;
 }
 
-.footer p, .footer a {
-    color: #fff;
+.footer li a {
+    text-decoration: none;
+}
+
+.footer li a:hover {
+    text-decoration: underline;
 }
 
 .footer .row > div:first-child > img {
@@ -432,6 +455,7 @@ h1 {
     }
 
     .ps-plus, .ps-now {
+        padding-top: 24px;
         padding-bottom: 24px;
     }
     
